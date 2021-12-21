@@ -4,7 +4,7 @@
 
 ทดสอบกรณีต่อไปนี้ 
 
-- สร้าง User โดยไม่ระบบ Email หรือ Password
+- สร้าง User โดยไม่ระบุ Email หรือ Password
 
 
 ## 2. ปรับแต่ง Schema 
@@ -30,7 +30,7 @@ const userSchema = new Schema({
 ```ts
 // index.ts
 
-app.post('/users', async (request: Request, response: Response) => {
+app.post('/users', async (request, response) => {
     console.log(request.body)
 
     // ปรับแต่่งมาใช้ try/catch เพื่อรองรับกรณีที่ mongoose คืนค่า error ออกมาจากการใช้งาน schema
@@ -71,3 +71,4 @@ const userSchema = new Schema({
 ```
 
 - ทดสอบใส่ข้อมูล email ที่มี whitespace หรือช่องว่างด้านหน้า หรือด้านหลังข้อความ
+- ลองทำแบบเดียวกับ password
