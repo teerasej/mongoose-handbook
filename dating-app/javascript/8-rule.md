@@ -25,7 +25,7 @@ const userSchema = new Schema({
 
 ทดสอบสร้าง user ใหม่ และสังเกตการทำงานของ Web API
 
-## 3. รองรับกรณีที่
+## 3. ใช้ try/catch รองรับกรณีที่ Mongoose ทำการ validate ข้อมูลไม่ผ่าน
 
 ```ts
 // index.ts

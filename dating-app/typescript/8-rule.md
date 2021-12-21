@@ -25,7 +25,7 @@ const userSchema = new Schema({
 
 ทดสอบสร้าง user ใหม่ และสังเกตการทำงานของ Web API
 
-## 3. รองรับกรณีที่
+## 3. ใช้ try/catch รองรับกรณีที่ Mongoose ทำการ validate ข้อมูลไม่ผ่าน
 
 ```ts
 // index.ts
@@ -72,3 +72,4 @@ const userSchema = new Schema({
 
 - ทดสอบใส่ข้อมูล email ที่มี whitespace หรือช่องว่างด้านหน้า หรือด้านหลังข้อความ
 - ลองทำแบบเดียวกับ password
+- ลองใช้ค่า `minLength: 6` กับ password field
