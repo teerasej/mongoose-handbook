@@ -10,7 +10,7 @@ app.delete('/users', async (request, response) => {
     console.log(request.body.id)
 
     // เรามีคำสั่่ง .findByIdAndRemove ซึ่งทำให้ง่ายในการระบุ id เพื่อลบ document ออกจาก collection
-    await userModel.findByIdAndRemove(request.body.id)
+    await UserModel.findByIdAndRemove(request.body.id)
 
     response.status(200).send('ok DELETE')
 })

@@ -11,7 +11,7 @@ app.patch('/users', async (request, response) => {
 
     // ใช้คำสั่ง updateOne เพื่ออัพเดตข้อมูล
     // สังเกตว่า parameter แรกคือ condition และ parameter ที่ 2 คือค่าที่จะส่งเข้าไปอัพเดต
-    await userModel.updateOne({ email: request.body.email }, request.body)
+    await UserModel.updateOne({ email: request.body.email }, request.body)
 
     response.status(200).send('ok PATCH')
 

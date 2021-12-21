@@ -12,7 +12,7 @@ app.get('/users/:email', async (request, response) => {
     console.log(request.params.email)
 
     // ในที่นี้เรียกใช้ findOne และใช้ JavaScript object ในการระบุเงื่อนไข
-    const doc = await userModel.findOne({ email: request.params.email })
+    const doc = await UserModel.findOne({ email: request.params.email })
 
     response.status(200).json(doc)
 })
@@ -30,7 +30,7 @@ app.get('/users/:email', async (request, response) => {
 app.get('/users/:email', async (request, response) => {
     console.log(request.params.email)
 
-    const doc = await userModel.findOne({ email: request.params.email })
+    const doc = await UserModel.findOne({ email: request.params.email })
 
     // เช็คค่า null เพื่อส่ง http code ที่เหมาะสมให้ client
     if(doc) {
