@@ -22,3 +22,12 @@ app.patch('/users', async (request: Request, response: Response) => {
 ```
 
 - ทดสอบแทนที่ข้อมูลใน JSON ด้วยข้อมูลที่ไม่มีอยู่ก่อนหน้านี้ดู เช่น username, isAdmin
+- เราสามารถกำหนดให้ mongoDB เพิ่มข้อมูล update เป็น insert document ใหม่ได้ ผ่าน option ที่ชื่อว่า **upsert**
+
+```js
+ Model.updateOne({},{},{ upsert: true })
+```
+
+## อ้างอิง
+
+- [UpdateOne](https://docs.mongodb.com/manual/reference/method/db.collection.updateOne/)
