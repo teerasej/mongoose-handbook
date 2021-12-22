@@ -1,5 +1,5 @@
 
-# Dating Web API - TypeScript version
+# Dating Web API - JavaScript version
 
 - ในการทดสอบการทำงานของ Web API ในที่นี้ เราสามารถ[ใช้คำสั่ง CURL ที่เตรียมไว้](../curl-command.md)ได้ 
 
